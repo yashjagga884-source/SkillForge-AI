@@ -15,13 +15,11 @@ export function Careers() {
     difficulty: { label: 'Difficulty', options: [], value: null },
   })
 
-  // Initialize filter options
   const filterOptions = useMemo(() => ({
     domain: getUnique(CAREERS, 'domain'),
     difficulty: getUnique(CAREERS, 'difficulty'),
   }), [])
 
-  // Update filter options
   useMemo(() => {
     setFilters(prev => ({
       ...prev,
