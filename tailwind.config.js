@@ -9,12 +9,13 @@ export default {
     extend: {
       colors: {
         primary: '#4F46E5',
-        secondary: '#10B981',
+        secondary: '#0F9F8B',
         accent: '#F59E0B',
+        ink: '#172033',
         dark: {
-          bg: '#0F172A',
-          card: '#1E293B',
-          border: '#334155'
+          bg: '#0B1120',
+          card: '#131D32',
+          border: '#26344F'
         }
       },
       fontFamily: {

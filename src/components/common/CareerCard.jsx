@@ -20,19 +20,19 @@ export function CareerCard({ career, onClick }) {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.05, translateY: -5 }}
+      whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
       onClick={onClick}
-      className="card p-6 cursor-pointer group"
+      className="card p-6 cursor-pointer group hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-500/5 dark:hover:border-indigo-400/30"
     >
       <div className="flex justify-between items-start mb-4">
-        <div className="text-4xl">{career.icon}</div>
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-50 text-3xl dark:bg-indigo-400/10">{career.icon}</div>
         <button
           onClick={handleFavorite}
           className={`p-2 rounded-lg transition-all ${
             isFavorited
               ? 'bg-accent text-white'
-              : 'bg-gray-200 dark:bg-dark-border text-gray-400 group-hover:text-accent'
+              : 'bg-slate-100 dark:bg-dark-border text-slate-400 group-hover:text-accent'
           }`}
         >
           <Star className="w-5 h-5" fill={isFavorited ? 'currentColor' : 'none'} />
@@ -47,7 +47,7 @@ export function CareerCard({ career, onClick }) {
         {career.description}
       </p>
 
-      <div className="space-y-2 mb-4">
+      <div className="space-y-2.5 border-y border-slate-100 py-4 dark:border-dark-border">
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-600 dark:text-gray-400">Domain</span>
           <span className="font-medium">{career.domain}</span>
@@ -66,7 +66,7 @@ export function CareerCard({ career, onClick }) {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 text-sm text-accent font-medium">
+      <div className="mt-4 flex items-center gap-2 text-sm text-accent font-semibold">
         <TrendingUp className="w-4 h-4" />
         {career.demand} Demand
       </div>

@@ -33,18 +33,18 @@ export function TechCard({ tech }) {
 
   return (
     <motion.div
-      whileHover={{ scale: 1.05, translateY: -5 }}
+      whileHover={{ y: -6 }}
       transition={{ duration: 0.3 }}
-      className="card p-6 group"
+      className="card p-6 group hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-500/5 dark:hover:border-indigo-400/30"
     >
       <div className="flex justify-between items-start mb-4">
-        <div className="text-4xl">{tech.icon}</div>
+        <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-3xl dark:bg-emerald-400/10">{tech.icon}</div>
         <button
           onClick={handleBookmark}
           className={`p-2 rounded-lg transition-all ${
             isBookmarked
               ? 'bg-secondary text-white'
-              : 'bg-gray-200 dark:bg-dark-border text-gray-400 group-hover:text-secondary'
+              : 'bg-slate-100 dark:bg-dark-border text-slate-400 group-hover:text-secondary'
           }`}
         >
           <Bookmark className="w-5 h-5" fill={isBookmarked ? 'currentColor' : 'none'} />
