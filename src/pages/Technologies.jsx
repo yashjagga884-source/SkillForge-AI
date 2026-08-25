@@ -13,13 +13,11 @@ export function Technologies() {
     level: { label: 'Level', options: [], value: null },
   })
 
-  // Initialize filter options
   const filterOptions = useMemo(() => ({
     category: getUnique(TECHNOLOGIES, 'category'),
     level: getUnique(TECHNOLOGIES, 'level'),
   }), [])
 
-  // Update filter options
   useMemo(() => {
     setFilters(prev => ({
       ...prev,
@@ -28,7 +26,6 @@ export function Technologies() {
     }))
   }, [filterOptions])
 
-  // Filter technologies
   const filteredTechs = useMemo(() => {
     let results = filterBySearch(TECHNOLOGIES, searchTerm, ['name', 'description', 'category'])
 

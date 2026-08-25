@@ -144,9 +144,8 @@ export function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="card p-6 text-center hover:shadow-xl transition-shadow"
+              className="card p-8 text-center hover:shadow-xl transition-shadow"
             >
-              <div className="text-6xl mb-4">{member.emoji}</div>
               <h3 className="text-xl font-bold mb-1">{member.name}</h3>
               <p className="text-primary font-semibold mb-3">{member.role}</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm">{member.bio}</p>

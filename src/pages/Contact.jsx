@@ -25,10 +25,8 @@ export function Contact() {
     setIsSubmitting(true)
 
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
 
-      // Here you would typically send this to a backend
       console.log('Form submitted:', formData)
 
       toast.success('Message sent successfully! We\'ll get back to you soon.')
