@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, X, Moon, Sun, Sparkles } from 'lucide-react'
-import { useTheme } from '../../context/ThemeContext'
-import { motion } from 'framer-motion'
+import { Menu, X, Moon, Sun, Sparkles } from '../common/Icons'
+import { motion } from '../common/StaticMotion'
 
 const navLinks = [
   { label: 'Home', path: '/' },
@@ -12,9 +11,8 @@ const navLinks = [
   { label: 'Contact', path: '/contact' },
 ]
 
-export function Navbar() {
+export function Navbar({ isDark, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false)
-  const { isDark, toggleTheme } = useTheme()
 
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl dark:border-dark-border dark:bg-dark-bg/85">

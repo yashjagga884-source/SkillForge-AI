@@ -120,9 +120,10 @@ export function Contact() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-semibold mb-2">Name</label>
+              <label htmlFor="contact-name" className="block text-sm font-semibold mb-2">Name</label>
               <input
                 type="text"
+                id="contact-name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
@@ -132,9 +133,10 @@ export function Contact() {
               />
             </div>
             <div>
-              <label className="block text-sm font-semibold mb-2">Email</label>
+              <label htmlFor="contact-email" className="block text-sm font-semibold mb-2">Email</label>
               <input
                 type="email"
+                id="contact-email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
@@ -146,9 +148,10 @@ export function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-2">Subject</label>
+            <label htmlFor="contact-subject" className="block text-sm font-semibold mb-2">Subject</label>
             <input
               type="text"
+              id="contact-subject"
               name="subject"
               value={formData.subject}
               onChange={handleChange}
@@ -159,8 +162,9 @@ export function Contact() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold mb-2">Message</label>
+            <label htmlFor="contact-message" className="block text-sm font-semibold mb-2">Message</label>
             <textarea
+              id="contact-message"
               name="message"
               value={formData.message}
               onChange={handleChange}

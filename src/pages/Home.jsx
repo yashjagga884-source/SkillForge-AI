@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { ArrowRight, Zap, Users, Rocket, CheckCircle2, Sparkles } from 'lucide-react'
+import { motion } from '../components/common/StaticMotion'
+import { ArrowRight, Zap, Users, Rocket, CheckCircle2, Sparkles } from '../components/common/Icons'
 import { CAREERS, TECHNOLOGIES, TESTIMONIALS, FAQS } from '../constants/data'
 import { CareerCard } from '../components/common/CareerCard'
 import { TechCard } from '../components/common/TechCard'
