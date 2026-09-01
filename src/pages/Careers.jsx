@@ -28,7 +28,6 @@ export function Careers() {
     }))
   }, [filterOptions])
 
-  // Filter careers
   const filteredCareers = useMemo(() => {
     let results = filterBySearch(CAREERS, searchTerm, ['name', 'description', 'domain'])
 

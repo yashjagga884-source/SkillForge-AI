@@ -14,7 +14,6 @@ export function CareerDetails() {
 
   const career = CAREERS.find(c => c.id === parseInt(id))
 
-  // Track recently viewed
   React.useEffect(() => {
     if (career) {
       const updated = [career.id, ...recentlyViewed.filter(cid => cid !== career.id)].slice(0, 10)
